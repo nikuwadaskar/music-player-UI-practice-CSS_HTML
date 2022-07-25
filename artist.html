@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artist</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/b9448a8646.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+
+    <section class="nav-playbar">
+
+      <!-- nav bar -->
+
+      <nav>
+        <div class="left nav">
+          <div class="icon">
+            <img src="/music-player-android-icon-removebg-preview.png" alt="" />
+          </div>
+          <div class="favourite medianone">
+            <a href="#">Favourites</a>
+            <i class="fas fa-solid fa-heart media none"></i>
+          </div>
+        </div>
+        <div class="right nav">
+          <input id="input" type="text" placeholder="Search" class="search" />
+          <a href="#"></a>
+          <i class="fas fa-search mic media"></i>
+          <a href="#input"><i class="lni lni-search-alt media none searchicon one"></i></a>
+          <!-- <a href="#"><i class="lni lni-search-alt media none searchicon two"></i></a> -->
+          <div class="search-bell">
+            <i class="fas fa-bell"></i>
+          </div>
+          <div class="profile">
+            <img
+              src="/assests/100965323_100853061658884_5605064103761543168_n.jpg"
+              alt="user image"
+              class="dp"
+            />
+          </div>
+        </div>
+      </nav>
+
+
+      <!-- playbar -->
+
+      <div id="playbar" class="playbar">
+        <div class="section-one-song">
+          <div class="song-image"><img src="/song poster/01-ekdillekjaan.webp" alt=""></div>
+          <div class="song-name"><h4>EK dil ek jaan</h4><p>Shivam Pathak</p></div>
+          <div class="fav"><i class="fas fa-heart"></i> <i class="fas fa-ban"></i></div>
+        </div>
+        <div class="section-two-play-progressbar">
+          <div class="play-buttons"><i class="far fa-random"></i><i class="fas fa-step-backward"></i><i class="fas fa-pause"></i><i class="fas fa-step-forward"></i><i class="fas fa-repeat"></i></div>
+          <div class="preogressbar">1:23<progress id="file" value="32" max="100"> 32% </progress>3:56</div>
+        </div>
+        <div class="section-three-volume-buttons"><i class="fas fa-list"></i><progress id="file" value="32" max="100"> 32% </progress><i class="fas fa-expand-alt"></i><a href="#"><i class="fa-solid fa-xmark"></i></a></div>
+      </div>
+    </section>
+
+    <!-- artist  -->
+
+    <main id="artist">
+      <div class="main-right">
+        <div class="artist-info">
+          <div class="artist-image"></div>
+          <div class="name-buttons">
+            <div class="artist-name">
+                <h2>George Michael</h2>
+                <p><h4>Singer-songwriter</h4></p>
+                <p style="padding-right: 1%;">George Michael was an English singer, songwriter and record producer. He is considered one of the most significant cultural icons of the MTV generation and is one of the best-selling musicians of all time, with sales of over 120 million records worldwide.</p>
+            </div>
+            <div class="artist-buttons">
+                <button class="one">Play All</button> <button class="two">Follow</button>
+                <p>900 Tracks | 129 Albums</p>
+            </div>
+          </div>
+        </div>
+        <div class="artist-song">
+            <div class="queue-song one center">
+                <div class="queue-song-left">
+                  <div class="song-number">01</div>
+                  <img src="/assests/GeorgeMichael/01-Careless Whisper.webp" alt="" />
+                  <div class="song-name">
+                    <h4>Careless Whisper</h4>
+                    <p>George Michael</p>
+                  </div>
+                </div>
+                <div class="queue-song-right">
+                  <div class="queue-song-right">
+                    <i class="fas fa-heart"></i> &nbsp &nbsp &nbsp <i class="fas fa-plus"></i>
+                    <!-- fav icon -->
+                  </div>
+                </div>
+              </div>
+            <div class="queue-song one center">
+                <div class="queue-song-left">
+                  <div class="song-number">01</div>
+                  <img src="/assests/GeorgeMichael/01-Careless Whisper.webp" alt="" />
+                  <div class="song-name">
+                    <h4>Father Figure</h4>
+                    <p>George Michael</p>
+                  </div>
+                </div>
+                <div class="queue-song-right">
+                  <div class="queue-song-right">
+                    <i class="fas fa-heart"></i> &nbsp &nbsp &nbsp <i class="fas fa-plus"></i>
+                    <!-- fav icon -->
+                  </div>
+                </div>
+              </div>
+            <div class="queue-song one center">
+                <div class="queue-song-left">
+                  <div class="song-number">01</div>
+                  <img src="/assests/GeorgeMichael/01-Careless Whisper.webp" alt="" />
+                  <div class="song-name">
+                    <h4>Fastlove</h4>
+                    <p>George Michael</p>
+                  </div>
+                </div>
+                <div class="queue-song-right">
+                  <div class="queue-song-right">
+                    <i class="fas fa-heart"></i> &nbsp &nbsp &nbsp <i class="fas fa-plus"></i>
+                    <!-- fav icon -->
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+
+      <!-- similar arttist  -->
+
+      <div class="main-left">
+        <div class="similar-artist">
+            <div class="heading"><div class="h2"><h2>Similar Artist</h2></div><div class="p"><p>Queue</p></div></div>
+            <div class="similar-artist-info">
+                <div class="latestRelease-song-two l2">
+                    <div class="latestRelease-song-four-left">
+                      <div class="song-thumbnail">
+                        <a href="#playbar"><i class="fas fa-solid fa-play play"></i></a>
+                        <!-- <img src="/LatestRelease.png" alt="" /> -->
+                      </div>
+                      <div class="latestRelease-song songname releasedate"></div>
+                      <div class="latestRelease-song songname">
+                        <h4>Ed Sheeran</h4>
+                        <p>Shape Of You</p>
+                      </div>
+                    </div>
+                    <div class="latestRelease-song-four-right">
+                      <p>3:54</p>
+                    </div>
+                  </div>
+                <div class="latestRelease-song-two l2">
+                    <div class="latestRelease-song-four-left">
+                      <div class="song-thumbnail">
+                        <a href="#playbar"><i class="fas fa-solid fa-play play"></i></a>
+                        <!-- <img src="/LatestRelease.png" alt="" /> -->
+                      </div>
+                      <div class="latestRelease-song songname releasedate"></div>
+                      <div class="latestRelease-song songname">
+                        <h4>Ed Sheeran</h4>
+                        <p>Shape Of You</p>
+                      </div>
+                    </div>
+                    <div class="latestRelease-song-four-right">
+                      <p>3:54</p>
+                    </div>
+                  </div>
+                <div class="latestRelease-song-two l2">
+                    <div class="latestRelease-song-four-left">
+                      <div class="song-thumbnail">
+                        <a href="#playbar"><i class="fas fa-solid fa-play play"></i></a>
+                        <!-- <img src="/LatestRelease.png" alt="" /> -->
+                      </div>
+                      <div class="latestRelease-song songname releasedate"></div>
+                      <div class="latestRelease-song songname">
+                        <h4>Ed Sheeran</h4>
+                        <p>Shape Of You</p>
+                      </div>
+                    </div>
+                    <div class="latestRelease-song-four-right">
+                      <p>3:54</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+        <!-- similaer artist  -->
+
+        <div class="recently-played">
+            <div class="heading"><div class="h2"><h2>Recently Played</h2></div><div class="p"><p>Queue</p></div></div>
+            <div class="queue-song one center">
+                <div class="queue-song-left">
+                  <div class="song-number">01</div>
+                  <img src="/assests/song poster/01-ekdillekjaan.webp" alt="" />
+                  <div class="song-name">
+                    <h4>Ek Dil Ek Jaan</h4>
+                    <p>Shivam Pathak</p>
+                  </div>
+                </div>
+                <div class="queue-song-right">
+                  <div class="queue-song-right">
+                    <i class="fas fa-heart"></i>
+                    <!-- fav icon -->
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

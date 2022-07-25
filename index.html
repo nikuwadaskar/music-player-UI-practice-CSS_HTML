@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player Project</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet" />
+    <link
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/b9448a8646.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <section class="nav-playbar">
+      <!-- Navbar -->
+      <nav>
+        <div class="left nav">
+          <div class="icon">
+            <img src="/assests/music-player-android-icon-removebg-preview.png" alt="" />
+          </div>
+          <i id="heart" class="fa-solid fa-heart"></i>
+          <div class="favourite medianone">
+            <a href="#"><i class="fa-regular fa-heart"></i>&nbspFavourites </a>
+            <i class="fas fa-solid fa-heart media none"></i>
+          </div>
+        </div>
+        <div class="right nav">
+          <input id="input" type="text" placeholder="Search" class="search" />
+          <a href="#"></a>
+          <i class="fas fa-search mic media"></i>
+          <a href="#input"><i class="lni lni-search-alt media none searchicon one"></i></a>
+          <div class="search-bell">
+            <i class="fas fa-bell"></i>
+          </div>
+          <div class="profile">
+            <img
+              src="/assests/100965323_100853061658884_5605064103761543168_n.jpg"
+              alt="user image"
+              class="dp"
+            />
+          </div>
+        </div>
+      </nav>
+
+      <!-- Playbar -->
+
+      <div id="playbar" class="playbar">
+        <div class="section-one-song">
+          <div class="song-image"><img src="/assests/song poster/01-ekdillekjaan.webp" alt=""></div>
+          <div class="song-name"><h4>EK dil ek jaan</h4><p>Shivam Pathak</p></div>
+          <div class="fav"><i class="fas fa-heart"></i> <i class="fas fa-ban"></i></div>
+        </div>
+        <div class="section-two-play-progressbar">
+          <div class="play-buttons"><i class="far fa-random"></i><i class="fas fa-step-backward"></i><i class="fas fa-pause"></i><i class="fas fa-step-forward"></i><i class="fas fa-repeat"></i></div>
+          <div class="preogressbar">1:23<progress id="file" value="32" max="100"> 32% </progress>3:56</div>
+        </div>
+        <div class="section-three-volume-buttons"><i class="fas fa-list"></i><i class="fas fa-computer-speaker"></i><i class="lni lni-volume-high"></i><progress id="file" value="32" max="100"> 32% </progress><i class="fas fa-expand-alt"></i><a href="#"><i class="fa-solid fa-xmark"></i></a></div>
+      </div>
+    </section>
+
+    <!-- main body -->
+
+    <main class="section-one">
+
+      <!-- maiin body right section -->
+      <div class="main-right">
+
+        <!-- posters -->
+
+        <div class="poster">
+          <div class="poster-one p1">
+          </div>
+          <div class="poster-two p1"></div>
+          <div class="poster-three p1"></div>
+        </div>
+
+        <!-- latest release -->
+
+        <div class="latestRelaese-main">
+          <div class="latestRelease-heading">
+            <h3>Latest Release</h3>
+          </div>
+          <div class="latestRelease-songs">
+            <div class="latestRelease-song-one l">
+              <div class="latestRelease-song-four-left">
+                <div class="song-thumbnail">
+                  <a href="#playbar"><i class="fas fa-solid fa-play play"></i></a>
+                </div>
+                <div class="latestRelease-song songname releasedate"></div>
+                <div class="latestRelease-song songname">
+                  <a href="#playbar"><h4>Galway Girl</h4></a>
+                  <p>3 March 2017</p>
+                </div>
+              </div>
+              <div class="latestRelease-song-four-right">
+                <p>2:48</p>
+                <div class="simple"> <a href="#more-one"><i class="fa-solid fa-ellipsis"></i></a> </div>
+                <div id="more-one" class="latestRelease-song moreoption">
+                  <div class="moreoption">
+                    <div class="playnow">Play Now</div>
+                    <div class="addtoqueue">Add To Queue</div>
+                    <div class="addtofav">Add To Favorites</div>
+                    <div class="getinfo"> Get Info</div>
+                    <div class="close"><a href="#">Close</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="latestRelease-song-two l">
+              <div class="latestRelease-song-four-left">
+                <div class="song-thumbnail">
+                  <a href="#playbar"><i class="fas fa-solid fa-play play"></i></a>
+                </div>
+                <div class="latestRelease-song songname releasedate"></div>
+                <div class="latestRelease-song songname">
+                  <h4>Shape Of You</h4>
+                  <p>3 March 2017</p>
+                </div>
+              </div>
+              <div class="latestRelease-song-four-right">
+                <p>3:54</p>
+                <div class="simple"> <a href="#more-two"><i class="fa-solid fa-ellipsis"></i></a> </div>
+                <div id="more-two" class="latestRelease-song moreoption">
+                  <div class="moreoption">
+                    <div class="playnow">Play Now</div>
+                    <div class="addtoqueue">Add To Queue</div>
+                    <div class="addtofav">Add To Favorites</div>
+                    <div class="getinfo"> Get Info</div>
+                    <div class="close"><a href="#">Close</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="latestRelease-song-three l">
+              <div class="latestRelease-song-four-left">
+                <div class="song-thumbnail">
+                  <a href="#playbar"><i class="fas fa-solid fa-play play"></i></a>
+                </div>
+                <div class="latestRelease-song songname">
+                  <h4>Perfect</h4>
+                  <p>3 March 2017</p>
+                </div>
+              </div>
+              <div class="latestRelease-song-four-right">
+                <p>4:23</p>
+                <div class="simple"> <a href="#more"><i class="fa-solid fa-ellipsis"></i></a></div>
+                <div id="more" class="latestRelease-song moreoption">
+                  <div class="moreoption">
+                    <div class="playnow">Play Now</div>
+                    <div class="addtoqueue">Add To Queue</div>
+                    <div class="addtofav">Add To Favorites</div>
+                    <div class="getinfo"> Get Info</div>
+                  <div class="close"><a href="#">Close</a></div>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="latestRelease-song-four l">
+              <div class="latestRelease-song-four-left">
+                <div class="song-thumbnail">
+                  <a href="#playbar"><i class="fas fa-solid fa-play play"></i></a>
+                  <!-- <img src="/LatestRelease.png" alt="" /> -->
+                </div>
+                <div class="latestRelease-song songname">
+                  <h4>Barcelona</h4>
+                  <p>3 March 2017</p>
+                </div>
+              </div>
+              <div class="latestRelease-song-four-right">
+                <p>3:11</p>
+                <div class="simple"> <a href="#more-four"><i class="fa-solid fa-ellipsis"></i></a> </div>
+                <div id="more-four" class="latestRelease-song moreoption">
+                  <div class="moreoption">
+                    <div class="playnow">Play Now</div>
+                    <div class="addtoqueue">Add To Queue</div>
+                    <div class="addtofav">Add To Favorites</div>
+                    <div class="getinfo"> Get Info</div>
+                    <div class="close"><a href="#">Close</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- popular artist -->
+
+        <div class="popular-artist">
+          <div class="popular-artist-heading">
+            <h3>Popular Artist</h3>
+          </div>
+          <div class="popular-artist-images">
+            <div class="artist-one a1">
+              <a href="http://127.0.0.1:5500/artist.html">
+              <img src="/assests/artist/a1-dollyPatron.webp" alt="" />
+              </a>
+              <p> <h4>Dolly Patron</h4> </p>
+            </div>
+            <div class="artist-one a1">
+              <a href="http://127.0.0.1:5500/artist.html">
+                <img class="George Michael" src="/assests/artist/a1-George-Michael.webp" alt="" />
+              </a>
+              <p> <h4>George Michael</h4> </p>
+            </div>
+            <div class="artist-one a1">
+              <a href="http://127.0.0.1:5500/artist.html">
+              <img src="/assests/artist/a1-kennyRogers.webp" alt="" />
+              </a>
+              <p> <h4>Kenny Roger's</h4> </p>
+            </div>
+            <div class="artist-one a1">
+              <a href="http://127.0.0.1:5500/artist.html">
+              <img src="/assests/artist/a1-papon.jpg" alt="" />
+              </a>
+              <p> <h4>Papon</h4> </p>
+            </div>
+            <div class="artist-one a1">
+              <a href="http://127.0.0.1:5500/artist.html">
+              <img src="/assests/artist/a1-ArethaFranklin.webp" alt="" />
+              </a>
+              <p> <h4>Aretha Franklin</h4> </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Radio's mood stations  -->
+
+        <div class="section-two">
+          <div class="radio-sections">
+            <div class="mood-stations">
+              <div class="station ">
+                <h2 >
+                  Station
+                </h2>
+              </div>
+              <div class="mood-love ms">
+                <h2>Love</h2>
+              </div>
+              <div class="mood-retro ms">
+                <h2>Retro</h2>
+              </div>
+              <div class="mood-club ms">
+                <h2>Club</h2>
+              </div>
+              <div class="mood-rock ms">
+                <h2>Rock</h2>
+              </div>
+              <div class="mood-pop ms">
+                <h2>Pop</h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- music cars -->
+
+          <div class="music-card">
+          <div class="card-party mc"><h2>Party</h2></div>
+          <div class="card-elctronic mc"><h2>Electronic</h2></div>
+          <div class="card-roadtrip mc"><h2>Road Trip</h2></div>
+          </div>
+
+          <!-- Latest English -->
+
+          <div class="latest latest-english">
+            <div class="latest-english-heading">
+              <h2>Latest English</h2>
+            </div>
+            <div class="latest-album">
+              <div class="latest-english-album-one le"><img src="/assests/English/01-Lil_Nas_X_-_Industry_Baby.png" alt=""><div class="info"><h3>Industry_Baby</h3><p>20-06-2022</p></div></div>
+              <div class="latest-english-album-two le"><img src="/assests/English/02-woman.jfif" alt=""><div class="info"><h3>Woman</h3><p>23-06-2022</p></div></div>
+              <div class="latest-english-album-three le"><img src="/assests/English/03-habits.webp" alt=""><div class="info"><h3>Habits</h3><p>23-06-2022</p></div></div>
+              <div class="latest-english-album-four le"><img src="/assests/English/04-at my worst.jfif" alt=""><div class="info"><h3>At My Worst</h3><p>23-06-2022</p></div></div>
+              <div class="latest-english-album-five le"><img src="/assests/English/05-Anxiety.jpg" alt=""><div class="info"><h3>Anxiety</h3><p>23-06-2022</p></div></div>
+              <div class="latest-english-album-six le"><img src="/assests/English/06-stay.png" alt=""><div class="info"><h3>Stay</h3><p>23-06-2022</p></div></div>
+            </div>
+          </div>
+
+          <!-- latest hindi -->
+
+          <div class="latest">
+            <div class="latest-heading">
+              <h2>Latest Hindi</h2>
+            </div>
+            <div class="latest-album">
+              <div class="latest-english-album-one le"><img src="/assests/Hindi/01-meredholana.jpg" alt=""><div class="info"><h3>Mere Dholna</h3><p>20-06-2022</p></div></div>
+              <div class="latest-english-album-two le"><img src="/assests/Hindi/02-ranjha.jpg" alt=""><div class="info"><h3>Ranjha</h3><p>23-06-2022</p></div></div>
+              <div class="latest-english-album-three le"><img src="/assests/Hindi/03-tip tip.jpg" alt=""><div class="info"><h3>Tip Tip</h3><p>23-06-2022</p></div></div>
+              <div class="latest-english-album-four le"><img src="/assests/Hindi/04-kahani.jpg" alt=""><div class="info"><h3>Kahani</h3><p>23-06-2022</p></div></div>
+              <div class="latest-english-album-five le"><img src="/assests/Hindi/05-rangsaari.jfif" alt=""><div class="info"><h3>Rangisari</h3><p>23-06-2022</p></div></div>
+              <div class="latest-english-album-six le"><img src="/assests/Hindi/06-khairaiyat.jpg" alt=""><div class="info"><h3>Khairiyat</h3><p>23-06-2022</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- main left side section -->
+
+
+      <div class="main-left">
+
+        <!-- main queue -->
+
+        <div class="queue">
+          <div class="heading">
+            <h1>Queue</h1>
+          </div>
+          <div class="option">
+            <select name="" id="queue">
+              <option value="1" class="none" selected>Queue</option>
+              <option value="1"><a href="#">Playlist</a></option>
+              <option value="1"><a href="#">Favourite Songs</a></option>
+            </select>
+          </div>
+        </div>
+        <div class="queue-song">
+          <ul>
+            <li class="center">
+              <div class="queue-song one center">
+                <div class="queue-song-left">
+                  <div class="song-number">01</div>
+                  <img src="/assests/song poster/01-ekdillekjaan.webp" alt="" />
+                  <div class="song-name">
+                    <h4>Ek Dil Ek Jaan</h4>
+                    <p>Shivam Pathak</p>
+                  </div>
+                </div>
+                <div class="queue-song-right">
+                  <div class="queue-song-right">
+                    <i class="fas fa-heart"></i>
+                    <!-- fav icon -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="center">
+              <div class="queue-song one center">
+                <div class="queue-song-left">
+                  <div class="song-number">02</div>
+                  <img src="/assests/song poster/02-Sixteen.jfif" alt="" />
+                  <div class="song-name">
+                    <h4>Sixteen</h4>
+                    <p>Ellie Goulding</p>
+                  </div>
+                </div>
+                <div class="queue-song-right">
+                  <div class="queue-song-right">
+                    <i class="fas fa-heart"></i>
+                    <!-- fav icon -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="center">
+              <div class="queue-song one center">
+                <div class="queue-song-left">
+                  <div class="song-number">03</div>
+                  <img src="/assests/song poster/03-Phir Mohabbat.jfif" alt="" />
+                  <div class="song-name">
+                    <h4>Phir Mohabbat</h4>
+                    <p>Arijit Singh</p>
+                  </div>
+                </div>
+                <div class="queue-song-right">
+                  <div class="queue-song-right">
+                    <i class="fas fa-heart"></i>
+                    <!-- fav icon -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="center">
+              <div class="queue-song one center">
+                <div class="queue-song-left">
+                  <div class="song-number">04</div>
+                  <img src="/assests/song poster/04-It Wasn't Me.jfif" alt="" />
+                  <div class="song-name">
+                    <h4>It Wasn't Me</h4>
+                    <p>Rik Rok , Shaggy</p>
+                  </div>
+                </div>
+                <div class="queue-song-right">
+                  <div class="queue-song-right">
+                    <i class="fas fa-heart"></i>
+                    <!-- fav icon -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="center">
+              <div class="queue-song one center">
+                <div class="queue-song-left">
+                  <div class="song-number">05</div>
+                  <img src="/assests/song poster/05-O palanhare.jfif" alt="" />
+                  <div class="song-name">
+                    <h4>O Paalanhaare</h4>
+                    <p>Lata Mangeshkar</p>
+                  </div>
+                </div>
+                <div class="queue-song-right">
+                  <div class="queue-song-right">
+                    <i class="fas fa-heart"></i>
+                    <!-- fav icon -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="center">
+              <div class="queue-song one center">
+                <div class="queue-song-left">
+                  <div class="song-number">06</div>
+                  <img src="/assests/song poster/06-Kathai Aankhon Wali.jpg" alt="" />
+                  <div class="song-name">
+                    <h4>Kathai Aankhon Wali</h4>
+                    <p>Kumar Sanu</p>
+                  </div>
+                </div>
+                <div class="queue-song-right">
+                  <div class="queue-song-right">
+                    <i class="fas fa-heart"></i>
+                    <!-- fav icon -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="center">
+              <div class="queue-song one center">
+                <div class="queue-song-left">
+                  <div class="song-number">07</div>
+                  <img src="/assests/song poster/07-The Power of Love.jpg" alt="" />
+                  <div class="song-name">
+                    <h4>The Power of Love</h4>
+                    <p>Jennifer Rush</p>
+                  </div>
+                </div>
+                <div class="queue-song-right">
+                  <div class="queue-song-right">
+                    <i class="fas fa-heart"></i>
+                    <!-- fav icon -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="center">
+              <div class="queue-song one center">
+                <div class="queue-song-left">
+                  <div class="song-number">08</div>
+                  <img src="/assests/song poster/08-Stand by me.jfif" alt="" />
+                  <div class="song-name">
+                    <h4>Stand by Me</h4>
+                    <p>Ben E. King</p>
+                  </div>
+                </div>
+                <div class="queue-song-right">
+                  <div class="queue-song-right">
+                    <i class="fas fa-heart"></i>
+                    <!-- fav icon -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="center">
+              <div class="queue-song one center">
+                <div class="queue-song-left">
+                  <div class="song-number">09</div>
+                  <img src="/assests/song poster/09-2002.jfif" alt="" />
+                  <div class="song-name">
+                    <h4>2002</h4>
+                    <p>Anne-Marie</p>
+                  </div>
+                </div>
+                <div class="queue-song-right">
+                  <div class="queue-song-right">
+                    <i class="fas fa-heart"></i>
+                    <!-- fav icon -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="center">
+              <div class="queue-song one center">
+                <div class="queue-song-left">
+                  <div class="song-number">10</div>
+                  <img src="/assests/song poster/10-Beautiful People.jfif " alt="" />
+                  <div class="song-name">
+                    <h4>Beautiful People</h4>
+                    <p>Ed Sheeran</p>
+                  </div>
+                </div>
+                <div class="queue-song-right">
+                  <div class="queue-song-right">
+                    <i class="fas fa-heart"></i>
+                    <!-- fav icon -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="center">
+              <div class="queue-song one center">
+                <div class="queue-song-left">
+                  <div class="song-number">11</div>
+                  <img src="/assests/song poster/11-i dont care.webp" alt="" />
+                  <div class="song-name">
+                    <h4>I Don't Care</h4>
+                    <p>Ed Sheeran, Justin Bieber</p>
+                  </div>
+                </div>
+                <div class="queue-song-right">
+                  <div class="queue-song-right">
+                    <i class="fas fa-heart"></i>
+                    <!-- fav icon -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="center">
+              <div class="queue-song one center">
+                <div class="queue-song-left">
+                  <div class="song-number">12</div>
+                  <img src="/assests/song poster/12-good life.webp" alt="" />
+                  <div class="song-name">
+                    <h4>Good Life</h4>
+                    <p>Kehlani , G-Easy</p>
+                  </div>
+                </div>
+                <div class="queue-song-right">
+                  <div class="queue-song-right">
+                    <i class="fas fa-heart"></i>
+                    <!-- fav icon -->
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

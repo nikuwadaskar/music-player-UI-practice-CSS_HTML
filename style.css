@@ -1,0 +1,778 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+/* section-playbar-navbar */
+
+.nav-playbar{
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Nav bar */
+
+
+nav{
+
+    width: 100vp;
+    display: flex;
+    position: sticky;
+    top: 0px;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: aqua;
+    opacity: 0.9;
+    box-shadow: 0px 0px 17px 2px aqua;
+}
+
+.left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.favourite{
+    margin-left: 50px;
+}
+.icon img{
+   height: 60px;
+}
+.profile img{
+    border-radius: 50%;
+    align-items: flex-end;
+   height: 50px;
+}
+.search-bell{
+    margin: 0px 30px 0px 30px;
+}
+.search:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 0px 1px 0px  rgba(255, 0, 0, 0.7);;
+}
+
+.search{
+    background-color: rgba(255, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+    border: none;
+    outline: none;
+}
+.none{
+    display: none;
+}
+
+#heart{
+    display: none;
+}
+
+/* Play Bar */
+
+.section-one-song img{
+    height: 50px;
+}
+.playbar,
+.section-one-song{
+    display: flex;
+    padding: 1% 1% 0% 1%;
+    align-items: center;
+    gap: 10px;
+}
+
+.playbar{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: -100px;
+    color: transparent;
+} 
+
+#playbar:target{
+    position: absolute;
+    background-color: #b7c9d9;
+    z-index: 1;
+    justify-content: space-between;
+    opacity: 1;
+    width: 97%;
+    bottom: 0px;
+    color: black;
+    top: auto;
+    height: 15%;
+}
+
+
+.play-buttons{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.section-three-volume-buttons{
+    width: 18%;
+    gap: 11px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.preogressbar{
+    margin-top: 5%;
+}
+
+
+/* main section */
+
+main{
+    background-image:linear-gradient(#80FFDB 100px, #5390D9 40%, #7400B8);
+    display: flex;
+    height: 89vh;
+}
+.main-right{
+    width: 75vw;
+    height: auto;
+    overflow: auto;
+}
+.main-left{
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 90px;
+    width: 25vw;
+    overflow: auto;
+}
+
+
+/* posters */
+
+.poster{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: auto;
+    scrollbar-width: none;
+    height: 49%;
+}
+
+.p1{
+    height: 200px;
+    width: fit-content;
+    margin: 10px;
+    min-width: 250px;
+}
+.poster-one{
+    background: url(/assests/poster/poster-one.webp)no-repeat center center/cover;
+    background-position-x: right;
+    transition: all 0.3s ease-in-out;
+}
+.poster-two{
+    background: url(/assests/poster/poster-two.webp)no-repeat center center/cover;
+    transition: all 0.3s ease-in-out;
+}
+.poster-three{
+    background: url(/assests/poster/poster-three.webp)no-repeat center center/cover;
+    transition: all 0.3s ease-in-out;
+}
+.poster-one:hover{
+    transform: scale(1.1);
+}
+.poster-two:hover{
+    transform: scale(1.1);
+}
+.poster-three:hover{
+    transform: scale(1.1);
+}
+.p1 img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* Latest release */
+
+
+.latestRelaese-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 44vh;
+    padding: 2%;
+}
+
+.latestRelease-songs{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.latest-english-heading{
+    padding-top: 2%;
+}
+
+.song-thumbnail:hover{
+    transform: scale(1.05);
+    background-color: black;
+    opacity: 0.8;
+}
+
+.song-thumbnail {
+    background-image: url(/assests/LatestRelease.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12px;
+    padding: 6px;
+    height: 75px;
+    width: 75px;
+}
+.song-thumbnail img{
+    
+    height: 80px;
+    width: 80px;
+}
+.songname {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.songname p{
+    margin: 6px 0px 0px 6px;
+}
+.songname h4{
+    margin: -6px 0px 0px 6px;
+}
+.l{
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid rgb(1, 1, 7); */
+    height: 49%;
+    width: 48%;
+}
+.latestRelease-song-one,
+.latestRelease-song-two,
+.latestRelease-song-three,
+.latestRelease-song-four{
+    display: flex;
+    margin: 1%;
+    box-shadow: 0px 0px 6px 0px black;
+    justify-content: space-between;
+    align-items: center;
+}
+.latestRelease-song{
+    overflow: auto;
+}
+.latestRelease-song-four-left{
+    width: 70vw;
+    display: flex;
+}
+.latestRelease-song-four-right{
+    width: 32%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.simple{
+    font-weight: 1000;
+    font-size: larger;
+    transform: rotate(90deg);
+}
+.moreoption{
+    width: 0px;
+    height: 0px;
+}
+#more-one:target{
+    height: 18%;
+    width:150px;
+    position: absolute;
+    border: 5px;
+    background-color: azure;
+}
+#more-two:target{
+    height: 18%;
+    width:150px;
+    right: 28%;
+    top: 51%;
+    position: fixed;
+    background-color: azure;
+}
+#more-four:target{
+    height: 18%;
+    width:150px;
+    right: 28%;
+    top: 66%;
+    position: fixed;
+    position: absolute;
+    background-color: azure;
+}
+#more:target{
+    height: 18%;
+    width:150px;
+    position: absolute;
+    background-color: azure;
+}
+.close,
+.getinfo,
+.addtofav,
+.addtoqueue,
+.playnow{
+    z-index: 10;
+    border: 1px solid black;
+    width:148px;
+    height: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Popular Artist */
+
+.popular-artist{
+    overflow-x: scroll;
+}
+
+.popular-artist-images{
+    display: flex;
+    width: 60pc;
+    overflow: scroll;
+    justify-content: space-between;
+    height: 100%;
+    margin: 2%;
+    box-shadow: 0px 0px 6px 0px black;
+}
+
+h3 {
+    padding-top:2% ;
+    padding-left: 2%;
+} 
+.a1 h4{
+    display: flex;
+    justify-content: center;
+}
+.a1{
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    padding: 1%;
+    
+}
+.a1 img:hover{
+    transform: scale(1.1);
+}
+.a1 img{
+    background-color: black;
+    width: 100%;
+    height: 150px;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* Section Two */
+
+/* Mood And Stations */
+
+.radio-sections{
+    width: 100%;
+    overflow: scroll;
+}
+.mood-stations{
+    margin: 2%;
+    padding: 2%;
+    width: 57.5pc;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 6px 0px black;
+    height: 180px;
+}
+.station:hover{
+    opacity: .9;
+    color: aliceblue;
+}
+
+.station{
+    background-image: url(/assests/mood-stations/01-stations.webp);
+    background-position: center;
+    background-size: cover;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: -20px;
+    color: transparent;
+    transition: all 0.2s ease-in-out ;
+    height: 80%;
+    width: 100%;
+}
+.mood-love:hover{
+    opacity: .9;
+    color: aliceblue;
+}
+.ms{
+    background-image: url(/assests/mood-stations/02-moodlove.jfif);
+    background-position: center;
+    background-size: cover;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: -20px;
+    margin-top: 2%;
+    height: 70%;
+    border-radius: 50%;
+    width: 85%;
+    color: transparent;
+    transition: all 0.2s ease-in-out ;
+}
+.mood-retro:hover{
+    opacity: .9;
+    color: aliceblue;
+}
+.mood-retro{
+    background-image: url(/assests/mood-stations/03-moodretro.jpg);
+}
+.mood-club:hover{
+    opacity: .9;
+    color: aliceblue;
+}
+.mood-club{
+    background-image: url(/assests/mood-stations/04-moodclub.jfif);
+}
+.mood-pop:hover{
+    opacity: .9;
+    color: aliceblue;
+}
+.mood-pop{
+    background-image: url(/assests/mood-stations/06-moodPop.jpg);
+}
+.mood-rock:hover{
+    opacity: .9;
+    color: aliceblue;
+}
+.mood-rock{
+    background-image: url(/assests/mood-stations/05-moodrock.webp);
+}
+
+
+
+/* Crads */
+
+.music-card{
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+}
+
+
+
+.mc h2{
+    display: flex;
+    height: 100%;
+    opacity: 0.4;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.card-party h2{
+    background-image: linear-gradient(red, yellow);
+}
+.card-elctronic h2{
+    background-image: linear-gradient(blue, pink);
+}
+.card-roadtrip h2{
+    background-image: linear-gradient(pink, rgb(190, 130, 140));
+}
+.mc{
+    height: 165px;
+    width: 30%;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+}
+
+.card-party:hover{
+    background-size: 115%;
+}
+.card-party{
+    background-image: url(/assests/cards/01-party.jpg);
+    background-size: 100%;
+}
+.card-elctronic:hover{
+    background-size: 115%;
+}
+.card-elctronic{
+    background-image: url(/assests/cards/02-electronic.jpg);
+    background-size: 100%;
+}
+.card-roadtrip:hover{
+    background-size: 125%;
+}
+
+.card-roadtrip{
+    background-image: url(/assests/cards/01-roadtrip.jpg);
+    background-size: 110%;
+   
+}
+
+
+
+/* Latest songs */
+
+.latest h2{
+    padding: 0% 2% 2% 2%;
+}
+
+.latest-album{
+    width: 60pc;
+    box-shadow: 0px 0px 6px 0px black;
+    height: 200px;
+}
+.latest{
+    overflow-x: scroll;
+    height: 297px;
+    padding: 0% 2% 0% 2%;
+}
+.latest-album{
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    gap: 5px;
+}
+.le{
+    padding: 2%;
+    height: 100px;
+    width: 140px;
+}
+
+.info {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+.le img {
+   height: 100%;
+   width: 100%;
+}
+
+
+/* Main Left seciton */
+
+/* Queue */
+
+.main-left{
+    position: sticky;
+    top:450px
+}
+.queue{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around ;
+    align-items: center;
+    margin-bottom: 5%;
+}
+select{
+    outline: none;
+    background: transparent;
+    border: none;
+    width: 60%;
+}
+.queue-song{
+    z-index: -1;
+    display: flex;
+    overflow: auto;
+    justify-content: space-between;
+    padding:4% 1% 4% 1%;
+}
+.queue-song.one.center {
+    margin: 4%;
+    padding: 0% 8% 0% 5%;
+    box-shadow: 0px 0px 6px 0px black;
+}
+ul{
+    list-style: none;
+}
+.queue-song-left{
+    display: flex;
+    gap: 5%;
+    align-items: center;
+}
+.queue-song-right{
+    display: flex;
+    align-items: center;
+}
+
+.queue-song-right{
+    font-weight: 1000;
+}
+
+.queue-song-left img{
+    width: 30%;
+}
+
+.option{
+    display: flex;
+    justify-content: right;
+}
+
+/* Play Button */
+
+.play:hover{
+    transform: scale(1.05);
+}
+.play{
+    filter: invert(90%);
+}
+
+
+/* Artist Info */
+
+#artist-nav{
+    height: 100%;
+}
+
+#artist{
+    height: 91vh;
+}
+.artist-info{
+    padding: 5%;
+    height: 45%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.artist-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.name-buttons{
+    display: flex;
+    overflow: scroll;
+    flex-direction: row;
+    width: 99%;
+}
+.artist-name{
+    flex-direction: row;
+    padding: 3%;
+    padding-top: 7%;
+    width: 99%;
+}
+
+button.two:hover{
+    box-shadow: 0px 0px 10px 0px black;
+}
+button.two{
+    color: black;
+    background-color: transparent;
+    border: none;
+}
+button.one{
+    color: white;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 3px;
+}
+
+button{
+    padding: 2% 7% 2% 6%;
+    margin: 4%;
+    cursor: pointer;
+}
+.artist-image{
+    background-image: url(/assests/artist/a1-George-Michael.webp);
+    background-position: center;
+    background-size: cover;
+    width: 39%;
+    height: 100%;
+}
+
+/* similar artists */
+
+.heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3%;
+    padding-top: 8%;
+}
+.l2{
+    display: flex;
+    margin: 2%;
+    flex-direction: row;
+    width: 94%;
+}
+
+
+.artist-song>.queue-song {
+    padding: 0;
+    height: 100%;
+}
+
+@media screen and (max-width :500px){
+    .l,
+    .latestRelease-songs{
+        overflow: hidden;
+        overflow: auto;
+        width: 89vw;
+    }
+    .none-after-500{
+        display: none;
+    }
+    .medianone a ,input{
+        display: none;
+    }
+
+    .preogressbar{
+        display: NONE;
+    }
+    #heart{
+        margin-left: 33%;
+        display: block;
+    }
+}
+@media screen and (max-width :700px){
+
+     #input:target{
+        display: block;
+    }
+
+    .select{
+        width: 10%;
+    }
+ 
+    .main-right{
+        width: 100vw;
+        
+    }
+    .main-left{
+        display: none;
+    }
+
+    
+    .simple{
+        transform: rotate(0deg);
+    }
+}
